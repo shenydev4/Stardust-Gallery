@@ -1,0 +1,31 @@
+// responsive design comfort
+
+@mixin value($command, $value-xl, $value-md, $value-xs) {
+  @media ( min-width: 1920px ) {
+    #{$command}: $value-xl;
+  }
+  @media ( max-width: 1919px ) {
+    #{$command}: $value-md;
+  }
+  @media ( max-width: 1023px ) {
+    #{$command}: $value-xs;
+  }
+}
+
+@mixin value-xl($command, $value-xl) {
+  @media ( min-width: 1920px ) {
+    #{$command}: $value-xl;
+  }
+}
+
+@mixin value-md($command, $value-md) {
+  @media ( max-width: 1919px ) and ( min-width: 1024px ) {
+    #{$command}: $value-md;
+  }
+}
+
+@mixin value-xs($command, $value-xs) {
+  @media ( max-width: 1023px ) {
+    #{$command}: $value-xs;
+  }
+}

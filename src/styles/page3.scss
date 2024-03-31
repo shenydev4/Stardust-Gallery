@@ -1,0 +1,485 @@
+@import 'responsive';
+// @include value($command, $value-xl, $value-md, $value-xs);
+// @include value-[xl,md,xs]($command, $value);
+
+@mixin orbit-animation($duration, $start-offset) {
+  animation: orbit-rotation #{$duration}s -#{calc(($start-offset / 365) * $duration)}s linear infinite forwards
+}
+@keyframes orbit-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin infocard-animation($duration, $start-offset) {
+  animation: infocard-rotation #{$duration}s -#{calc(($start-offset / 365) * $duration)}s linear infinite forwards
+}
+@keyframes infocard-rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+// styles
+
+#page3 {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: visible;
+
+    .test3dplanet {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .planetary {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50%;
+      transition: margin-left 250ms ease;
+
+      &-funfact {
+        position: absolute;
+        @include value(font-size, 28px, 24px, 0);
+        bottom: 10px;
+        left: 10px;
+      }
+
+      div {
+        position: absolute;
+      }
+      button {
+        border: none;
+        background-color: rgba($color: #000000, $alpha: 0);
+      }
+      div, span, button {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    .sun {
+      z-index: 8;
+      background: white;
+      box-shadow: 0 0 100px 0px yellow, inset 2px 2px 20px 12px rgba($color: yellow, $alpha: .8);
+      @include value(width, 50px, 45px, 40px);
+
+      .infocard {
+        opacity: 0;
+        bottom: 35px;
+        width: 100%;
+        transition: opacity 250ms ease;
+
+        p {
+          text-shadow: 0 0 5px white;
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+
+      &:hover .infocard {
+        opacity: 1;
+      }
+    }
+
+    .orbit {
+      // outline: 1px solid grey;
+      
+      &-mercury {
+        z-index: 7;
+        @include value(width, 80px, 70px, 60px);
+        @include orbit-animation(5, 300);
+      }
+      &-venus {
+        z-index: 6;
+        @include value(width, 150px, 100px, 95px);
+        @include orbit-animation(12.9, 122);
+      }
+      &-earth {
+        z-index: 5;
+        @include value(width, 240px, 160px, 160px);
+        @include orbit-animation(21, 260);
+      }
+      &-mars {
+        z-index: 4;
+        @include value(width, 360px, 230px, 240px);
+        @include orbit-animation(39.5, 138);
+      }
+      &-jupiter {
+        z-index: 3;
+        @include value(width, 480px, 380px, 340px);
+        @include orbit-animation(249.6, 37);
+      }
+      &-saturn {
+        z-index: 2;
+        @include value(width, 580px, 480px, 450px);
+        @include orbit-animation(618.8, 109);
+      }
+      &-uranus {
+        z-index: 1;
+        @include value(width, 680px, 590px, 550px);
+        @include orbit-animation(1762, 38);
+      }
+      &-neptune {
+        z-index: 0;
+        @include value(width, 800px, 700px, 680px);
+        @include orbit-animation(3457, 93);
+      }
+    }
+    .planet {
+      display: block;
+      box-shadow: 0 0 10px 1px black;
+
+      &-hoverbox {
+        position: relative;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        transition: box-shadow 250ms ease;
+
+        &:hover {
+          .planet-hoverbox-infocard {
+            opacity: 1;
+          }
+        }
+
+        &-infocard {
+          position: absolute;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity 250ms ease;
+          p {
+            text-shadow: 0 0 4px black;
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+            top: -15px;
+            transform: translateX(-50%);
+            left: 50%;
+            position: absolute;
+            width: fit-content;
+            text-align: center;
+          }
+        }
+
+        // 5	12,93103448	20,97701149	39,48275862	249,6264368	618,8218391	1762,068966	3457,011494
+        .planet-mercury {
+          width: 6px;
+          background: grey;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(5, 300);
+          }
+        }
+        .planet-venus {
+          width: 8px;
+          background: beige;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(12.9, 122);
+          }
+        }
+        .planet-earth {
+          width: 8px;
+          background: lightblue;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(21, 260);
+          }
+        }
+        .planet-mars {
+          width: 10px;
+          background: indianred;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(39.5, 138);
+          }
+        }
+        .planet-jupiter {
+          width: 30px;
+          background: tan;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(249.6, 37);
+          }
+        }
+        .planet-saturn {
+          width: 25px;
+          background: khaki;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(618.8, 109);
+          }
+        }
+        .planet-uranus {
+          width: 15px;
+          background: lightblue;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(1762, 38);
+          }
+        }
+        .planet-neptune {
+          width: 14px;
+          background: lightsteelblue;
+          & + .planet-hoverbox-infocard {
+            @include infocard-animation(3457, 93);
+          }
+        }
+      }
+
+      &-clickbox {
+        @include value-xs(display, none);
+        opacity: 0;
+        backdrop-filter: blur(6px);
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        @include value(width, 400px, 300px, 0);
+        height: 400px;
+        border-radius: 8px;
+        border: 2px dashed rgba($color: #fff, $alpha: .7);
+        margin-left: 550px;
+        @include value(margin-left, 550px, 300px, 0);
+        padding: 16px;
+        transition: opacity 250ms ease;
+
+        &-infocard {
+          display: none;
+          opacity: 0;
+          height: 100%;
+          flex-direction: column;
+          transition: opacity 250ms ease;
+
+          &-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px white;
+            a {
+              width: 35px;
+              height: 35px;
+              svg {
+                width: 35px;
+                height: 35px;
+              }
+            }
+          }
+
+          &-text {
+            @include value(font-size, 34px, 28px, 0);
+            text-shadow: 0 0 5px white;
+          }
+
+          .btn {
+            margin-top: auto;
+            svg {
+              transform: translateY(-68%);
+            }
+          }
+        }
+
+        .active {
+          display: flex;
+          opacity: 1;
+        }
+      }
+
+      &-3d-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        video {
+          position: absolute;
+          right: -200px;
+          filter: blur(2px);
+          top: 50%;
+          opacity: 0;
+          border-radius: 50%;
+          box-shadow: inset 0px 0px 36px 36px transparent;
+          transition: opacity 300ms ease;
+
+          &.active-3d {
+            opacity: .70;
+          }
+        }
+        #sun-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1.8);
+        }
+        #mercury-3d {
+          right: 0px;
+          transform: translateY(-46%) rotate(8deg) scale(0.6);
+        }
+        #venus-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1);
+        }
+        #earth-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1);
+        }
+        #mars-3d {
+          transform: translateY(-46%) rotate(8deg) scale(0.8);
+        }
+        #jupiter-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1.6);
+        }
+        #saturn-3d {
+          right: -100px;
+          transform: translateY(-46%) rotate(8deg) scale(2.3);
+        }
+        #uranus-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1.5);
+        }
+        #neptune-3d {
+          transform: translateY(-46%) rotate(8deg) scale(1.4);
+        }
+      }
+    }
+
+    @keyframes clickbox-init {
+
+    }
+    @keyframes clickbox-transition {
+
+    }
+  }
+
+  .container {
+    padding-top: 120px;
+    @include value(padding-top, 120px, 80px, 40px);
+
+    .infotab {
+      // border: 1px dashed red;
+      display: flex;
+      @include value(height, 500px, 800px, 100vh);
+      justify-content: space-between;
+      @include value(margin-bottom, 120px, 120px, 60px);
+      @include value(flex-direction, row, column-reverse, column-reverse);
+
+      &:nth-child(even) {
+        @include value-xl(flex-direction, row-reverse);
+      }
+      &:last-child {
+        @include value(margin-bottom, 250px, 200px, 100px);
+      }
+
+      .textcontent {
+        // border: 1px dashed blue;
+        @include value(height, 100%, 50%, 60%);
+        z-index: 99;
+
+        .header {
+          @include value(margin-bottom, 30px, 20px, 10px);
+          @include value(text-align, start, center, center);
+        }
+        .paragraph {
+          height: calc(100% - 75px);
+          overflow: hidden;
+          position: relative;
+          
+          &-content {
+            height: 100%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              width: 8px;
+              &-track {
+                background: transparent;
+              }
+              &-thumb {
+                background: radial-gradient(white, #cc95dd);
+                border-radius: 4px;
+                transition: all 200ms ease;
+  
+                &:hover {
+                  background: radial-gradient(white 30%, #cc95dd);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-outer {
+        // border: 1px dashed green;
+        @include value(width, 50%, 80%, 100%);
+        @include value-xl(padding, 0 60px);
+        @include value(margin, auto 0, 0 auto, 0);
+        height: fit-content;
+
+        .swiper {
+          --swiper-navigation-sides-offset: -50px;
+          --swiper-pagination-bottom: -25px;
+          aspect-ratio: 16/9;
+          overflow: visible;
+    
+          .swiper-wrapper {
+    
+            .swiper-slide {
+              @include value(opacity, 0, .5, .5);
+              filter: blur(2px);
+              transition: all 250ms ease;
+              transform: scale(.8);
+              &:hover {
+                transform: scale(.81);
+              }
+              
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+              }
+            }
+    
+            .swiper-slide-active {
+              opacity: 1;
+              transition: all 250ms ease;
+              filter: blur(0);
+              transform: scale(1);
+              &:hover {
+                transform: scale(1.01);
+              }
+            }
+          }
+    
+          .swiper-button {
+            &-prev, &-next {
+              svg {
+                fill: #fff;
+                &:hover {
+                  fill: rgba($color: #fff, $alpha: .6);
+                }
+              }
+              &::after {
+                display: none;
+              }
+            }
+    
+            &-prev svg {
+              transform: rotate(180deg);
+            }
+    
+            &-disabled svg {
+              fill: rgba($color: #fff, $alpha: .4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+--------------------
+--- Code related ---
+--------------------
+
+using
+  https://swiperjs.com/
+  https://sass-lang.com/ (Live Sass Compiler VSC-Extension-ID: 'glenn2223.live-sass'), (creates '.css'- & '.css.map'-files from my '.scss'-files)
+  https://cdnjs.com/libraries/lightgallery-js
+  ...
+
+external code snippets
+
+  file: src/js/LoadExternFiles.js
+  line: 1-33
+  Q: https://www.w3schools.com/howto/howto_html_include.asp
+  (accessed by '<div w3-include-html="[file].html"></div>')
+
+  file:
+  line: x
+
+  button: https://codepen.io/davidicus/pen/emgQKJ
+
+  ...
+
+
+
+-------------
+--- Fonts ---
+-------------
+
+https://www.fontspace.com/moon-flower-font-f44644 (moonflower)
+...
+
+
+
+-------------
+--- Media ---
+-------------
+
+please see 'Stardust-Gallery/#other/design' for own-made/edited media, including the layout
+
+using
+  Font Awesome (svg-icons)
+  Adobe Photoshop 2021
+  Adobe After Effects 2020
+  Adobe Media Encoder 2020
+  ...
+
+external Media
+
+  - https://youtu.be/EL2XOIVzvlU?si=b-ggnqr7TAs0p7Yt (black hole)
+  - https://youtu.be/UcgV4OFRS-w?si=S1_LWSbBVKI1wu9p (big bang)
+  - https://www.freepik.com/free-photo/planet-earth-background_49654953.htm#query=earth%20from%20space&position=1&from_view=keyword&track=ais&uuid=5bbe63f4-4a43-4c80-90a0-159c4b341d85 (Freepik Earth image)
+  - https://www.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-7_39994534.htm#query=space%20nebulae%202k%20epic&position=3&from_view=search&track=ais&uuid=3cd287e1-1601-47a5-b922-8bb04ed609d9 (Freepik Nebulae image)
+  - https://tenor.com/view/never-gonna-give-you-up-gif-23525460 (rick-roll)
+  ...
