@@ -1,8 +1,0 @@
-  3/31/2024 7:57:11 PM: Starting composition “Comp 2”.
-
-  Output To: C:\Users\sheny\OneDrive\Desktop\code\Projects\Stardust-Gallery\#other\design\AE\3d-planets_AME\Comp 2.avi    3/31/2024 7:57:37 PM: Finished composition “Comp 2”.
-
-
-  Total Time Elapsed: 26 Seconds
-Log closed on 3/31/2024 at 7:57:37 PM
-
