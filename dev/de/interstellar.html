@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+    <title>Stardust Gallery | interstellar</title>
+    <meta name="author" content="Alexander-S. Dretvic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./../src/img/favicon.ico" />
+    <!-- imports -->
+    <link rel="stylesheet" href="./../src/styles/globals.css" />
+    <link rel="stylesheet" href="./../src/styles/interstellar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="w-full" id="header">
+
+      <div class="nav-md-xl w-full">
+        <a href="./home.html" class="logo">
+          <img src="./../src/img/logo.png" alt="Site Logo" />
+        </a>
+
+        <div class="nav-md-xl-items">
+          <a href="./erde.html">erde</a>
+          <a href="./solar.html">solar</a>
+          <a href="./interstellar.html" class="current-selected">interstellar</a>
+        </div>
+
+        <div class="nav-md-xl-lang">
+          <a href="./interstellar.html" class="current-selected">DE</a>
+          <p>&nbsp;|&nbsp;</p>
+          <a href="./../en/interstellar.html">EN</a>
+        </div>
+      </div>
+
+      <div class="nav-xs w-full flex-col">
+
+        <div class="nav-xs-topbar w-full">
+          <a href="./home.html" class="logo">
+            <img src="./../src/img/logo.png" alt="Site Logo" />
+          </a>
+  
+          <button class="nav-btn" onclick="navBtnHandler();" >
+            <img src="./../src/icons/menu.svg" alt="menu icon" class="nav-btn-menu" />
+            <img src="./../src/icons/close.svg" alt="close icon" class="nav-btn-close" />
+          </button>
+
+        </div>
+
+        <span class="animation-circle"></span>
+        
+        <div class="active-mobile-nav flex-col">
+          <div class="active-mobile-nav-items flex-center flex-col">
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html" class="current-selected">interstellar</a>
+          </div>
+
+          <div class="active-mobile-nav-links">
+            <div class="active-mobile-nav-links-rights">
+              <a href="./impressum.html">impressum</a>
+              <a href="./datenschutz.html">datenschutz</a>
+            </div>
+            <div class="active-mobile-nav-links-socials">
+              <a href="https://www.youtube.com/" target="_blank" >
+                <img src="./../src/img/youtube.png" alt="YouTube Button" />
+              </a>
+              <a href="https://www.reddit.com/" target="_blank" >
+                <img src="./../src/img/reddit.png" alt="Reddit Button" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" >
+                <img src="./../src/img/x.png" alt="X Button" />
+              </a>
+            </div>
+          </div>
+          
+          <div class="active-mobile-nav-lang">
+            <div class="nav-md-xl-lang">
+              <a href="./interstellar.html" class="current-selected">DE</a>
+              <p>&nbsp;|&nbsp;</p>
+              <a href="./../en/interstellar.html">EN</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- this file -->
+    <div id="page3" class="moonflower-normal">
+
+      <div class="hero flex-center moonflower-bold">
+        <h1>Jenseits unseres Sterns</h1>
+        <video src="./../src/img/interstellar/bigbang.webm" autoplay muted></video>
+        <span class="bottom-fade"></span>
+      </div>
+      
+      <div class="container moonflower-normal">
+
+        <h2 class="suntypes-header">
+          Sternenentwicklung
+        </h2>
+        
+        <div id="suntypes">
+          
+          <div class="textcontent">
+            <div class="suntypes-swiper">
+              <div class="swiper-wrapper">
+
+                <script>
+                  const wrapper = document.querySelector('#suntypes .swiper-wrapper');
+                  const types = [
+                    {
+                      fileName: 'zwerge',
+                      header: 'Zwerge (Hauptreihe)',
+                      content: 'Zwerge machen etwa 75% aller beobachtbaren Sterne aus. Daher spricht man hier auch von einer Hauptreihe. Sterne verbringen die meiste Zeit ihres Lebens in diesem Stadium, da sie so lange anhält wie der Stern Wasserstoff im Kern verbrennt. Dabei hat der Stern ein stabiles Gleichgewicht.',
+                      link: 'https://de.wikipedia.org/wiki/Hauptreihe',
+                    },
+                    {
+                      fileName: 'unterzwerge',
+                      header: 'Unterzwerge',
+                      content: 'Unterzwerge unterscheiden sich kaum zu den Zwergen der Hauptreihe. Ihre Leuchtkraft ist lediglich deutlich schwächer, bei gleicher Oberflächentemperatur.',
+                      link: 'https://de.wikipedia.org/wiki/Unterzwerg',
+                    },
+                    {
+                      fileName: 'unterriesen',
+                      header: 'Unterriesen',
+                      content: 'Unterriesen befinden sich in einem “Übergangsstadium”, wenn sie am Ende ihrer Hauptreihenzeit angelangt sind. Hier ist die Leuchtkraft des Sterns bereits messbar stärker, allerdings noch zu gering, um zu den Riesensternen zu gehören.',
+                      link: 'https://de.wikipedia.org/wiki/Unterriese',
+                    },
+                    {
+                      fileName: 'riesen',
+                      header: 'Riesen',
+                      content: 'Riesen sind Sterne, die sich in der ersten Endphase nach ihrer langen Hauptreihenphase befinden. Ihr Radius ist in der Regel 10-100x größer als die unserer Sonne und haben außerdem eine 10-bis 1000-fache Leuchtkraft.',
+                      link: 'https://de.wikipedia.org/wiki/Riesenstern',
+                    },
+                    {
+                      fileName: 'helleriesen',
+                      header: 'Helle riesen',
+                      content: 'Helle Riesen zählen im Allgemeinen zu den Riesensternen, verfügen aber über eine außerordentlich hohe Leuchtkraft und verdienen sich dadurch eine eigene Kategorie. Jedoch ist der Stern dennoch nicht hell und massereich genug, um zu den Überriesen zu gehören.',
+                      link: 'https://de.wikipedia.org/wiki/Heller_Riese',
+                    },
+                    {
+                      fileName: 'ueberriesen',
+                      header: 'Überriesen',
+                      content: 'Ein Überriese ist ein Stern, der im Endstadium seiner Entwicklung steht. Er kann die 10- bis 40-fache Masse und einen Radius von über 1500-fachen unserer Sonne erreichen. Außerdem kann seine Leuchtkraft auf bis das 100000-fache unserer Sonne erreichen.Hat ein Überriese mehr als 25 Sonnenmassen wird der Stern zunächst zu einem Blauen Riesen, dann zu einem Roten bis schließlich weitere Prozesse voran laufen.',
+                      link: 'https://de.wikipedia.org/wiki/Roter_%C3%9Cberriese',
+                    },
+                    {
+                      fileName: 'weissezwerge',
+                      header: 'Weiße Zwerge',
+                      content: 'Weiße Zwerge haben ein Radius von nur etwa 7000-14000km. Sie sind die heißen Kerne von Roten Riesen, die übrig bleiben, wenn jene ihre äußere Hülle abstoßen.Die Vorraussetzung für die Entstehung ist, wenn ihre Masse unter einem Schwellenwert von 1.44 Sonnenmassen bleiben. Über diesem Schwellenwert würde der Kern ein Neutronenstern werden und wenn die Masse den Schwellenwert von 2,5 Sonnenmassen überschreitet entsteht ein schwarzes Loch.',
+                      link: 'https://de.wikipedia.org/wiki/Wei%C3%9Fer_Zwerg',
+                    },
+                  ];
+                  types.forEach((type, index) => {
+                    let html_snippet =
+                    `<div class="swiper-slide">
+                      <p class="header moonflower-bold">
+                        ${type.header}
+                      </p>
+                      <p class="content">
+                        ${type.content}
+                      </p>
+                      <a class="btn" href="${type.link}" target="blank" >
+                        <img src="./../src/icons/wikipedia.svg" alt="wikipedia icon" />
+                        <span>mehr lesen</span>
+                      </a>
+                    </div>`;
+                    wrapper.insertAdjacentHTML('beforeend', html_snippet);
+                  });
+                </script>
+
+              </div>
+              <div class="suntypes-swiper-pagination"></div>
+              <div class="suntypes-swiper-button">
+                <div class="suntypes-swiper-button-prev">
+                  <img src="./../src/icons/arrow-right.svg" alt="arrow left icon" />
+                </div>
+                <div class="suntypes-swiper-button-next">
+                  <img src="./../src/icons/arrow-right.svg" alt="arrow right icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image">
+            <img class="image-bg" src="./../src/img/interstellar/suntypes-diagramme.jpg" alt="suntypes diagramme" />
+            <span class="image-bg-gradient"></span>
+            <div class="image-dots">
+              <img class="image-dots-zwerge active" src="./../src/img/interstellar/zwerge.png" alt="zwerge-dots" />
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <video class="big-slider-media" id="blackhole-video" src="./../src/img/interstellar/blackhole.webm" autoplay loop muted></video>
+              <h2>Schwarzes Loch</h2>
+              <div class="paragraph">
+                <p>
+                  <b>Schwarze Löcher: Himmlische Kraftpakete mit ungeheuren Geheimnissen</b>
+                  <br/><br/>
+                  Schwarze Löcher sind kosmische Rätsel, Regionen in der Raumzeit, in denen die Schwerkraft so unglaublich stark ist, dass sich nichts, nicht einmal Licht, ihrem Griff entziehen kann. Diese Titanen der Schwerkraft gibt es in verschiedenen Größen:
+                  <br/><br/>
+                  <b>Schwarze Löcher mit Stellarmasse:</b> Diese Ungetüme entstehen, wenn massereiche Sterne ihren nuklearen Brennstoff verbrauchen und in einem dramatischen Kollaps ihre immense Masse in eine kompakte Region des Raums pressen.
+                  <br/><br/>
+                  <b>Supermassive Schwarze Löcher:</b> Im Herzen der meisten Galaxien befinden sich supermassereiche Schwarze Löcher, die ihre stellaren Verwandten in den Schatten stellen und die Millionen- oder Milliardenfache der Masse unserer Sonne beherbergen. Ihre Anwesenheit hat erheblichen Einfluss auf die Entstehung und Entwicklung von Galaxien.
+                  <br/><br/>
+                  Die Grenze, die ein Schwarzes Loch umgibt und jenseits derer ein Entkommen unmöglich ist, wird als Ereignishorizont bezeichnet. Innerhalb dieses Punktes, an dem es kein Entrinnen mehr gibt, wird die Raumzeit durch die hohe Schwerkraft verformt, so dass unsere bekannten physikalischen Gesetze nicht mehr gelten. Die Wissenschaftler sind weiterhin dabei, die Geheimnisse des Ereignishorizonts eines Schwarzen Lochs zu entschlüsseln.
+                  <br/><br/>
+                  Schwarze Löcher spielen eine entscheidende Rolle bei der Gestaltung des Kosmos. Man nimmt an, dass sie die Kraftwerke hinter aktiven galaktischen Kernen sind, in denen supermassereiche Schwarze Löcher die umgebende Materie verschlingen und dabei enorme Energiemengen freisetzen. Die Erforschung dieser rätselhaften Objekte hilft uns, die großräumige Struktur des Universums und die exotische Natur der Schwerkraft und der Raumzeit zu verstehen.
+                  <br/><br/>
+                  <b>Jenseits des Ereignishorizonts: Ein Reich der theoretischen Extreme</b>
+                  <br/><br/>
+                  Obwohl vieles über die Vorgänge jenseits des Ereignishorizonts unbekannt ist, haben Physiker theoretische Konzepte entwickelt, um das Innere von Schwarzen Löchern zu beschreiben. Eine Theorie geht von der Existenz einer Singularität aus, einem Punkt unendlicher Dichte, an dem die Raumzeit selbst auseinandergerissen wird. Die Natur von Singularitäten ist jedoch nach wie vor sehr theoretisch und lässt sich nicht vollständig mit unserem derzeitigen Verständnis der Physik vereinbaren.
+                  <br/><br/>
+                  Eine andere Theorie besagt, dass es am Ereignishorizont eine "Feuerwand" gibt, in der die einfallende Materie durch die Hawking-Strahlung verbrannt wird, eine theoretische Form der von Schwarzen Löchern ausgehenden Strahlung. Die Existenz einer Feuerwand ist noch umstritten, und es bedarf weiterer Forschung, um die wahre Natur des Ereignishorizonts und das Schicksal der Materie, die ihn durchquert, zu verstehen.
+                  <br/><br/>
+                  Die Erforschung schwarzer Löcher ist nach wie vor ein faszinierendes Gebiet der Astrophysik, das die Grenzen unseres Wissens erweitert und uns zwingt, uns mit den bizarren Implikationen der allgemeinen Relativitätstheorie auseinanderzusetzen. Mit der Entwicklung leistungsfähigerer Teleskope und Detektoren hoffen wir, die Geheimnisse dieser kosmischen Giganten zu entschlüsseln und ein tieferes Verständnis für die extremsten Umgebungen des Universums zu gewinnen.
+                  <br/><br/>
+                </p>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <video class="big-slider-media" id="neutronstars-video" src="./../src/img/interstellar/double-neutronstar.webm" autoplay loop muted></video>
+              <h2>Binäres Neutronensternsystem</h2>
+              <div class="paragraph">
+                <p>
+                  Die kollabierten Kerne massereicher Sterne, die in Supernovas explodierten. Sie sind unglaublich kompakt, packen die Masse unserer Sonne in eine stadtgroße Kugel und bestehen hauptsächlich aus Neutronen. Sie dienen als Laboratorien zur Untersuchung von Materie unter extremen Bedingungen, bieten Einblicke in den Supernova-Prozess und können Phänomene wie Pulsare und Magnetare antreiben.
+                  <br/><br/>
+                  Etwa 5 % der bekannten Neutronensterne existieren in Doppelsternsystemen. Diese Systeme können auf komplexe Weise entstehen und sich entwickeln, wobei sich Neutronensterne mit verschiedenen Sterntypen (Hauptreihensterne, Rote Riesen oder Weiße Zwerge) oder sogar mit anderen Neutronensternen paaren können. Aktuelle Theorien legen nahe, dass Neutronensterne auch Doppelsterne mit Schwarzen Löchern bilden können, und Verschmelzungen zwischen Neutronensternen oder einem Neutronenstern und einem Schwarzen Loch sind durch den Nachweis von Gravitationswellen beobachtet worden.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <video class="big-slider-media" id="quasar-video" src="./../src/img/interstellar/quasar.webm" autoplay loop muted></video>
+              <h2>Quasar</h2>
+              <div class="paragraph">
+                <p>
+                  Die unglaublich hellen, aktiven Kerne entfernter Galaxien, die von supermassiven schwarzen Löchern angetrieben werden, die Material akkretieren. Quasare können ganze Galaxien überstrahlen und sind aus Milliarden von Lichtjahren Entfernung sichtbar. Sie werfen ein Licht auf das frühe Universum und geben Aufschluss über die Entstehung von Galaxien und die Entwicklung supermassereicher schwarzer Löcher.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img class="big-slider-media" id="nebulae-image" src="./../src/img/interstellar/nebulae.png" alt="nebulae image" />
+              <h2>Nebel</h2>
+              <div class="paragraph">
+                <p>
+                  Nebel sind Gas- und Staubwolken, die von nahen Sternen beleuchtet werden und oft die Überreste sterbender Sterne oder Orte neuer Sternentstehung sind. Ihre Bedeutung liegt in den unterschiedlichen Formen, Farben und physikalischen Prozessen, die Aufschluss über die Sternentwicklung und die interstellare Umgebung geben.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <video class="big-slider-media" id="exoplanet-video" src="./../src/img/3d-planets/exoplanet-3d.webm" autoplay loop muted></video>
+              <h2>Exoplanet</h2>
+              <div class="paragraph">
+                <p>
+                  Exoplaneten sind erdähnliche Planeten, die ferne Sterne umkreisen. Billionen von ihnen weisen eine schwindelerregende Vielfalt an Größen, Zusammensetzungen und Umlaufbahnen auf. Dies erweitert unser Verständnis davon, wie Planeten entstehen, und gibt Hinweise auf die Möglichkeit, dass es anderswo Leben gibt. Doch trotz des Fermi-Paradoxons, das besagt, dass es im Universum von intelligentem Leben wimmeln sollte, haben wir keinen endgültigen Beweis für deren Existenz.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev">
+            <img src="./../src/icons/arrow-right.svg" alt="arrow left icon" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="./../src/icons/arrow-right.svg" alt="arrow right icon" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="w-full footer" id="footer">
+      <div class="container" >
+      
+        <div class="footer-upper" >
+          <div class="footer-upper-contact" >
+            <p>
+            name<br/>
+            Str. Nr.<br/>
+            plz stadt<br/>
+            phone nr.<br/>
+            email<br/>
+            </p>
+          </div>
+
+          <div class="footer-upper-navigation" >
+            <a href="./home.html">home</a>
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html" class="current-selected">interstellar</a>
+          </div>
+
+          <div class="footer-upper-newsletter" >
+            <form id="newsletter" onsubmit="handleSubmit()" >
+              <label for="newsletterInput" class="p" >Blast Off With Space News!</label>
+              <div class="input-helperbox">
+                <input type="email" id="newsletterInput" placeholder="example@mail.com" required class="moonflower-bold" />
+                <hr />
+              </div>
+              <button class="btn" type="submit" >
+                <img src="./../src/icons/newspaper.svg" alt="newspaper icon" />
+                <span>get news</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-lower" >
+          <div class="footer-lower-copyright" >
+            <p>&copy; 2024 by name</p>
+          </div>
+
+          <div class="footer-lower-socials" >
+            <a href="https://www.youtube.com/" target="_blank" >
+              <img src="./../src/img/youtube.png" alt="YouTube Button" />
+            </a>
+            <a href="https://www.reddit.com/" target="_blank" >
+              <img src="./../src/img/reddit.png" alt="Reddit Button" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" >
+              <img src="./../src/img/x.png" alt="X Button" />
+            </a>
+          </div>
+
+          <div class="footer-lower-rights" >
+            <a href="./impressum.html">impressum</a>
+            <a href="./datenschutz.html">datenschutz</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+
+    <!-- back to top -->
+    <a class="btt-btn" onclick="backToTop();" >
+      <img src="./../src/icons/arrow-up.svg" alt="arrow up icon" />
+    </a>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./../src/js/main.js"></script>
+    <script src="./../src/js/interstellar.js"></script>
+
+
+  </body>
+</html>

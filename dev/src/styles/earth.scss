@@ -1,0 +1,150 @@
+@import 'responsive';
+
+
+// styles
+
+#page2 {
+
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    z-index: -1;
+    box-shadow: 0px 0px 100px black inset;
+    justify-content: center;
+    display: flex;
+  
+    img {
+      width: auto;
+      @include value-xl(width, 100%);
+      height: 100%;
+      object-fit: cover;
+    }
+    .bottom-fade {
+      height: 150px;
+      left: 0;
+    }
+  }
+
+  .earth-sliders {
+    display: flex;
+    justify-content: space-around;
+    @include value(margin, 120px 0 60px 0, 80px 0 50px 0, 40px 0 40px 0);
+    @include value-xs(flex-direction, column);
+
+    & > div {
+      @include value(width, 50%, 50%, 100%);
+      @include value(padding, 0 5%, 0 2%, 0);
+      @include value(overflow, hidden, hidden, visible);
+      @include value(padding-bottom, 100px, 80px, 60px);
+      background: radial-gradient(rgba(255,255,255,.4), transparent 70%);
+
+      &:first-child {
+        @include value-xs(margin-bottom, 40px);
+      }
+
+      h2 {
+        text-align: center;
+        @include value(margin-bottom, 40px, 30px, 20px);
+      }
+    }
+
+    .swiper {
+      @include value(--swiper-navigation-sides-offset, -50px, 50px, 0);
+      @include value(--swiper-navigation-top-offset, 50%, -32%, 0%);
+      --swiper-navigation-top-offset: 50%;
+      --swiper-pagination-bottom: -35px;
+      aspect-ratio: 16/9;
+      overflow: visible;
+
+      &-wrapper {
+
+        .swiper-slide {
+          @include value(opacity, 0, 0, .5);
+          @include value-xs(filter, blur(2px));
+          transition: all 250ms ease;
+          border-radius: 8px;
+
+          &:hover {
+            transform: scale(1.02);
+          }
+          
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+          }
+        }
+
+        .swiper-slide-active {
+          opacity: 1;
+          transition: all 250ms ease;
+          @include value-xs(filter, blur(0));
+        }
+      }
+
+      &-button {
+        &-prev, &-next {
+          @include value-xs(display, none);
+          cursor: none;
+
+          img {
+            filter: invert(1);
+            transition: filter 250ms ease;
+
+            &:hover {
+              filter: invert(.5);
+            }
+          }
+          &::after {
+            display: none;
+          }
+        }
+
+        &-prev img {
+          transform: rotate(180deg);
+        }
+      }
+
+      &-pagination {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .earth-text, .moon-text {
+    position: relative;
+    @include value(padding, 0 300px 0 150px, 0 100px, 0);
+
+    h2 {
+      @include value(margin-bottom, 30px, 20px, 10px);
+    }
+
+    &-3d-planet {
+      position: absolute;
+      z-index: -1;
+      opacity: .5;
+    }
+  }
+
+  .earth-text {
+    @include value(margin-bottom, 100px, 80px, 60px);
+
+    &-3d-planet {
+      @include value(width, 1000px, 700px, 360px);
+      transform: rotate(-23deg);
+      top: -100px;
+      @include value(right, -100px, -300px, -150px);
+    }
+  }
+
+  .moon-text {
+    @include value(margin-bottom, 250px, 200px, 100px);
+
+    &-3d-planet {
+      @include value(width, 350px, 220px, 120px);
+      @include value(top, 0, -50px, -50px);
+      right: 0;
+    }
+  }
+}

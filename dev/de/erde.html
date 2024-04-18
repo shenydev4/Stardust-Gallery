@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+    <title>Stardust Gallery | erde</title>
+    <meta name="author" content="Alexander-S. Dretvic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./../src/img/favicon.ico" />
+    <!-- imports -->
+    <link rel="stylesheet" href="./../src/styles/globals.css" />
+    <link rel="stylesheet" href="./../src/styles/earth.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="w-full" id="header">
+
+      <div class="nav-md-xl w-full">
+        <a href="./home.html" class="logo">
+          <img src="./../src/img/logo.png" alt="Site Logo" />
+        </a>
+
+        <div class="nav-md-xl-items">
+          <a href="./erde.html" class="current-selected">erde</a>
+          <a href="./solar.html">solar</a>
+          <a href="./interstellar.html">interstellar</a>
+        </div>
+
+        <div class="nav-md-xl-lang">
+          <a href="./erde.html" class="current-selected">DE</a>
+          <p>&nbsp;|&nbsp;</p>
+          <a href="./../en/earth.html">EN</a>
+        </div>
+      </div>
+
+      <div class="nav-xs w-full flex-col">
+
+        <div class="nav-xs-topbar w-full">
+          <a href="./home.html" class="logo">
+            <img src="./../src/img/logo.png" alt="Site Logo" />
+          </a>
+  
+          <button class="nav-btn" onclick="navBtnHandler();" >
+            <img src="./../src/icons/menu.svg" alt="menu icon" class="nav-btn-menu" />
+            <img src="./../src/icons/close.svg" alt="close icon" class="nav-btn-close" />
+          </button>
+
+        </div>
+
+        <span class="animation-circle"></span>
+        
+        <div class="active-mobile-nav flex-col">
+          <div class="active-mobile-nav-items flex-center flex-col">
+            <a href="./erde.html" class="current-selected">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="active-mobile-nav-links">
+            <div class="active-mobile-nav-links-rights">
+              <a href="./impressum.html">impressum</a>
+              <a href="./datenschutz.html">datenschutz</a>
+            </div>
+            <div class="active-mobile-nav-links-socials">
+              <a href="https://www.youtube.com/" target="_blank" >
+                <img src="./../src/img/youtube.png" alt="YouTube Button" />
+              </a>
+              <a href="https://www.reddit.com/" target="_blank" >
+                <img src="./../src/img/reddit.png" alt="Reddit Button" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" >
+                <img src="./../src/img/x.png" alt="X Button" />
+              </a>
+            </div>
+          </div>
+          
+          <div class="active-mobile-nav-lang">
+            <div class="nav-md-xl-lang">
+              <a href="./erde.html" class="current-selected">DE</a>
+              <p>&nbsp;|&nbsp;</p>
+              <a href="./../en/earth.html">EN</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- this file -->
+    <div id="page2">
+
+      <div class="background">
+        <img src="./../src/img/page2_bg.jpg" alt="nebulae-background" />
+        <span class="bottom-fade"></span>
+      </div>
+
+      <div class="hero flex-center moonflower-bold">
+        <h1>Unser heller blauer Punkt</h1>
+      </div>
+      
+      <div class="container moonflower-normal">
+
+        <div class="earth-sliders">
+
+          <div class="earthImages">
+            <h2>Bilder</h2>
+            <div class="swiper">
+              <div class="swiper-wrapper gallery1">
+                <script>
+                  const gallery1 = document.querySelector('.gallery1');
+                  for(let i = 1; i <= 9; i++) {
+                    let html_snippet =
+                    `<a href="./../src/img/earth/earth-image${i}.jpg" class="swiper-slide">
+                      <img src="./../src/img/earth/earth-image${i}.jpg" alt="earth image ${i}" />
+                    </a>`;
+                    gallery1.insertAdjacentHTML('beforeend', html_snippet);
+                  }
+                </script>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev">
+                <img src="./../src/icons/arrow-right.svg" alt="arrow left icon" />
+              </div>
+              <div class="swiper-button-next">
+                <img src="./../src/icons/arrow-right.svg" alt="arrow right icon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="earthMaps">
+            <h2>Maps</h2>
+            <div class="swiper">
+              <div class="swiper-wrapper gallery2">
+                <script>
+                  const gallery2 = document.querySelector('.gallery2');
+                  for(let i = 1; i <= 15; i++) {
+                    let html_snippet =
+                    `<a href="./../src/img/earth/map${i}.jpg" class="swiper-slide">
+                      <img src="./../src/img/earth/map${i}.jpg" alt="earth map ${i}" />
+                    </a>`;
+                    gallery2.insertAdjacentHTML('beforeend', html_snippet);
+                  }
+                </script>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev">
+                <img src="./../src/icons/arrow-right.svg" alt="arrow left icon" />
+              </div>
+              <div class="swiper-button-next">
+                <img src="./../src/icons/arrow-right.svg" alt="arrow right icon" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="earth-text">
+          <video src="./../src/img/3d-planets/earth-3d.webm" class="earth-text-3d-planet" muted autoplay loop></video>
+          <h2>Erde</h2>
+          <p>
+            <b>Lebenserhaltungssystem:</b><br/>
+            Die einzigartige Lage der Erde in der bewohnbaren Zone, die Ozeane mit flüssigem Wasser und die schützende Atmosphäre schaffen die perfekten Bedingungen für das Leben, wie wir es kennen.  
+            <br/>Von den kleinsten Mikroben bis hin zu den größten Walen wimmelt es auf der Erde nur so vor Artenvielfalt.
+            <br/><br/>
+
+            <b>Die Blaue Murmel:</b><br/>
+            Ungefähr 71 % der Erdoberfläche sind von Wasser bedeckt, der größte Teil davon in den riesigen Salzwasserozeanen. Diese Ozeane regulieren das Klima, absorbieren Kohlendioxid und beherbergen ein riesiges Netz von Meereslebewesen.
+            <br/><br/>
+
+            <b>Geschichteter Aufbau:</b><br/>
+            Die Erde hat eine Schichtstruktur, die aus der Kruste (der dünnen äußeren Schicht), dem Mantel (einer dicken Schicht aus heißem, fließendem Gestein) und dem Kern (einer dichten, zentralen Region, die hauptsächlich aus Eisen und Nickel besteht) besteht.
+            <br/><br/>
+
+            <b>Aktive Geologie:</b><br/>
+            Die Plattentektonik treibt die Bewegung der Kontinente an, lässt Gebirge entstehen und verursacht Erdbeben und Vulkanausbrüche. Durch diese Prozesse wird die Oberfläche unseres Planeten ständig neu geformt.
+            <br/><br/>
+
+            <b>Klima und Wetter:</b><br/>
+            Die Erdatmosphäre, die Ozeane und die Landmassen wirken auf komplexe Weise zusammen, um das Klimasystem der Erde zu schaffen. Schwankungen in der Sonneneinstrahlung, die Erdumlaufbahn und die Neigung der Erde sowie Faktoren wie die vulkanische Aktivität beeinflussen sowohl das langfristige Klima als auch kurzfristige Wettermuster.
+            <br/>Außerdem schützt uns das starke Magnetfeld der Erde vor schädlicher Sonnenstrahlung und trägt zur Entstehung der prächtigen Polarlichter bei.
+            <br/><br/>
+
+            <b>Der Einfluss des Menschen:</b><br/>
+            Der Mensch ist eine mächtige Kraft, die den Planeten formt.  Unsere Aktivitäten verändern Landschaften, beeinflussen das Klima und wirken sich auf vielfältige Weise auf Ökosysteme aus.
+          </p>
+        </div>
+
+        <div class="moon-text">
+          <video src="./../src/img/3d-planets/moon-3d.webm" class="moon-text-3d-planet" muted autoplay loop></video>
+          <div class="background-moon"></div> 
+          <h2>Mond</h2>
+          <p>
+            <b>Entstehungsgeschichte:</b><br/>
+            Die vorherrschende Theorie besagt, dass der Mond aus Trümmern entstand, die nach der Kollision eines marsgroßen Objekts mit der jungen Erde ausgeworfen wurden. Dieses Kollisionsszenario erklärt den relativ geringen Eisengehalt des Mondes und die isotopischen Ähnlichkeiten mit der Erde. (da das Eisen tiefer im Erdkern liegt)
+            <br/><br/>
+
+            <b>Krater und Meere:</b><br/>
+            Die Oberfläche des Mondes ist stark zerkratzt, ein Zeugnis des Bombardements durch Asteroiden und Kometen. Dunklere, glattere Bereiche, die als "maria" (lateinisch für "Meere") bekannt sind, sind Becken, die mit alten Lavaströmen gefüllt sind.
+            <br/><br/>
+
+            <b>Keine Atmosphäre:</b><br/>
+            Da der Mond praktisch keine Atmosphäre hat, unterliegt er extremen Temperaturschwankungen und ist Strahlung und Mikrometeoriteneinschlägen ausgesetzt.
+            <br/><br/>
+
+            <b>Gezeiteneinfluss:</b><br/>
+            Die Anziehungskraft des Mondes erzeugt auf der Erde Gezeiten, die die Meeresströmungen und Küstenlinien beeinflussen.
+            <br/><br/>
+
+            <b>Phasen des Mondes:</b><br/>
+            Während der Mond die Erde umkreist, sind verschiedene Teile seiner sonnenbeschienenen Seite sichtbar, wodurch die bekannten Mondphasen entstehen (Neumond, Sichel, Vollmond usw.).
+            <br/><br/>
+
+            <b>Erforschung:</b><br/>
+            Der Mond stand schon immer im Mittelpunkt der menschlichen Erkundung, von den ersten Robotersonden bis hin zu den legendären Apollo-Missionen, bei denen Menschen auf der Mondoberfläche landeten. Künftige Missionen sehen eine dauerhafte menschliche Präsenz auf dem Mond vor.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="w-full footer" id="footer">
+      <div class="container" >
+      
+        <div class="footer-upper" >
+          <div class="footer-upper-contact" >
+            <p>
+            name<br/>
+            Str. Nr.<br/>
+            plz stadt<br/>
+            phone nr.<br/>
+            email<br/>
+            </p>
+          </div>
+
+          <div class="footer-upper-navigation" >
+            <a href="./home.html">home</a>
+            <a href="./erde.html" class="current-selected">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="footer-upper-newsletter" >
+            <form id="newsletter" onsubmit="handleSubmit()" >
+              <label for="newsletterInput" class="p" >Blast Off With Space News!</label>
+              <div class="input-helperbox">
+                <input type="email" id="newsletterInput" placeholder="example@mail.com" required class="moonflower-bold" />
+                <hr />
+              </div>
+              <button class="btn" type="submit" >
+                <img src="./../src/icons/newspaper.svg" alt="newspaper icon" />
+                <span>get news</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-lower" >
+          <div class="footer-lower-copyright" >
+            <p>&copy; 2024 by name</p>
+          </div>
+
+          <div class="footer-lower-socials" >
+            <a href="https://www.youtube.com/" target="_blank" >
+              <img src="./../src/img/youtube.png" alt="YouTube Button" />
+            </a>
+            <a href="https://www.reddit.com/" target="_blank" >
+              <img src="./../src/img/reddit.png" alt="Reddit Button" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" >
+              <img src="./../src/img/x.png" alt="X Button" />
+            </a>
+          </div>
+
+          <div class="footer-lower-rights" >
+            <a href="./impressum.html">impressum</a>
+            <a href="./datenschutz.html">datenschutz</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+
+    <!-- back to top -->
+    <a class="btt-btn" onclick="backToTop();" >
+      <img src="./../src/icons/arrow-up.svg" alt="arrow up icon" />
+    </a>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="./../src/js/main.js"></script>
+    <script src="./../src/js/earth.js"></script>
+
+
+  </body>
+</html>

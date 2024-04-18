@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+    <title>Stardust Gallery | solar</title>
+    <meta name="author" content="Alexander-S. Dretvic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./../src/img/favicon.ico" />
+    <!-- imports -->
+    <link rel="stylesheet" href="./../src/styles/globals.css" />
+    <link rel="stylesheet" href="./../src/styles/solar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="w-full" id="header">
+
+      <div class="nav-md-xl w-full">
+        <a href="./home.html" class="logo">
+          <img src="./../src/img/logo.png" alt="Site Logo" />
+        </a>
+
+        <div class="nav-md-xl-items">
+          <a href="./erde.html">erde</a>
+          <a href="./solar.html" class="current-selected">solar</a>
+          <a href="./interstellar.html">interstellar</a>
+        </div>
+
+        <div class="nav-md-xl-lang">
+          <a href="./solar.html" class="current-selected">DE</a>
+          <p>&nbsp;|&nbsp;</p>
+          <a href="./../en/solar.html">EN</a>
+        </div>
+      </div>
+
+      <div class="nav-xs w-full flex-col">
+
+        <div class="nav-xs-topbar w-full">
+          <a href="./home.html" class="logo">
+            <img src="./../src/img/logo.png" alt="Site Logo" />
+          </a>
+  
+          <button class="nav-btn" onclick="navBtnHandler();" >
+            <img src="./../src/icons/menu.svg" alt="menu icon" class="nav-btn-menu" />
+            <img src="./../src/icons/close.svg" alt="close icon" class="nav-btn-close" />
+          </button>
+
+        </div>
+
+        <span class="animation-circle"></span>
+        
+        <div class="active-mobile-nav flex-col">
+          <div class="active-mobile-nav-items flex-center flex-col">
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html" class="current-selected">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="active-mobile-nav-links">
+            <div class="active-mobile-nav-links-rights">
+              <a href="./impressum.html">impressum</a>
+              <a href="./datenschutz.html">datenschutz</a>
+            </div>
+            <div class="active-mobile-nav-links-socials">
+              <a href="https://www.youtube.com/" target="_blank" >
+                <img src="./../src/img/youtube.png" alt="YouTube Button" />
+              </a>
+              <a href="https://www.reddit.com/" target="_blank" >
+                <img src="./../src/img/reddit.png" alt="Reddit Button" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" >
+                <img src="./../src/img/x.png" alt="X Button" />
+              </a>
+            </div>
+          </div>
+          
+          <div class="active-mobile-nav-lang">
+            <div class="nav-md-xl-lang">
+              <a href="./solar.html" class="current-selected">DE</a>
+              <p>&nbsp;|&nbsp;</p>
+              <a href="./../en/solar.html">EN</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- this file -->
+    <div id="page3">
+      <div class="hero"> <!-- xs war doch als animation machbar :) -->
+
+        <div class="planet-3d-bg">
+          <img src="./../src/img/3d-planets/bg-milkyway.jpg" alt="milkyway" />
+          <video src="./../src/img/3d-planets/sun-3d.webm" autoplay muted loop id="sun-3d"></video>
+          <video src="./../src/img/3d-planets/mercury-3d.webm" autoplay muted loop id="mercury-3d"></video>
+          <video src="./../src/img/3d-planets/venus-3d.webm" autoplay muted loop id="venus-3d"></video>
+          <video src="./../src/img/3d-planets/earth-3d.webm" autoplay muted loop id="earth-3d"></video>
+          <video src="./../src/img/3d-planets/mars-3d.webm" autoplay muted loop id="mars-3d"></video>
+          <video src="./../src/img/3d-planets/jupiter-3d.webm" autoplay muted loop id="jupiter-3d"></video>
+          <video src="./../src/img/3d-planets/saturn-3d.webm" autoplay muted loop id="saturn-3d"></video>
+          <video src="./../src/img/3d-planets/uranus-3d.webm" autoplay muted loop id="uranus-3d"></video>
+          <video src="./../src/img/3d-planets/neptune-3d.webm" autoplay muted loop id="neptune-3d"></video>
+        </div>
+
+        <p class="planetary-funfact">
+          <b>daten:</b><br/>
+          echtzeit-datum: <span id="realDate"></span><br/>
+          simuliertes-datum: <span id="simulatedDate"></span><br/><br/>
+          <b>vergangene zeit:</b><br/>
+          echtzeit: <span id="realTime"></span><br/>
+          simulierte-zeit: <span id="simulatedTime"></span><br/><br/>
+          Diese Simulation ist um 150.336.00% beschleunigt in Bezug auf die Echtzeit-Umlaufzeiten.<br/>
+          Das entspricht auch der Entfernung zwischen der Sonne und unserer Erde:<br/>
+          &#126;150 Millionen km oder auch bekannt als &#126;1 Astronomische Einheit (AE)
+        </p>
+
+        <div class="planetary">
+          <div class="sun" onclick="planetClickHandler(0,'sun');">
+            <div class="infocard">
+              <p>sonne</p>
+            </div>
+          </div>
+  
+          <!-- hier muss ich mit deutsch aufpassen, bilder sind eng named -->
+          <script>
+            const planetary = document.querySelector('.planetary');
+            const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+            planets.forEach((planet, index) => {
+              let html_snippet = 
+              `<div class="orbit-${planet} orbit">
+                <button class="planet-hoverbox" onclick="planetClickHandler(${index + 1},'${planet}');">
+                  <span class="planet-${planet} planet"></span>
+                  <div class="planet-hoverbox-infocard" >
+                    <p>${planet}</p>
+                  </div>
+                </button>
+              </div>`;
+              planetary.insertAdjacentHTML('beforeend', html_snippet);
+            });
+          </script>
+        </div>
+
+        <div class="planet-clickbox">
+
+          <script>
+            const clickbox = document.querySelector('.planet-clickbox');
+            const planet_short_descriptions = [
+              // Masse, Durchmesser, Oberfl.-temp:, Distanz zur Sonne
+              {
+                title: 'sun',
+                text: 'Masse: 1.989 x 10^30 kg<br/>Durchmesser: 1,391,000 km<br/>Oberfl.-temp: 5,000 °C<br/>Kern-temp: ca. 15 Millionen °C<br/>Komposition: H (73%), He (25%)<br/>Typ: Gelber Zwergstern',
+              },
+              {
+                title: 'mercury',
+                text: 'Masse: 3.30 x 10^23 Tonnen<br/>Durchmesser: 4,880 km<br/>Oberfl.-temp: -180 °C bis 430 °C<br/>Distanz zur Sonne: 58 Millionen km<br/>',
+              },
+              {
+                title: 'venus',
+                text: 'Masse: 4.87 x 10^24 Tonnen<br/>Durchmesser: 12,104 km<br/>Oberfl.-temp: 462 °C<br/>Distanz zur Sonne: 108 Millionen km<br/>',
+              },
+              {
+                title: 'earth',
+                text: 'Masse: 5.97 x 10^24 Tonnen<br/>Durchmesser: 12,756 km<br/>Oberfl.-temp: -88 °C bis 58 °C<br/>Distanz zur Sonne: 150 Millionen km<br/>',
+              },
+              {
+                title: 'mars',
+                text: 'Masse: 6.42 x 10^23 Tonnen<br/>Durchmesser: 6,779 km<br/>Oberfl.-temp: -153 °C bis 20 °C<br/>Distanz zur Sonne: 228 Millionen km<br/>',
+              },
+              {
+                title: 'jupiter',
+                text: 'Masse: 1.90 x 10^27 Tonnen<br/>Durchmesser: 139,822 km<br/>Oberfl.-temp: -108 °C (Wolkenoberseite)<br/>Distanz zur Sonne: 778 Millionen km<br/>',
+              },
+              {
+                title: 'saturn',
+                text: 'Masse: 5.68 x 10^26 Tonnen<br/>Durchmesser: 116,464 km<br/>Oberfl.-temp: -138 °C (Wolkenoberseite)<br/>Distanz zur Sonne: 1.43 Milliarden km<br/>',
+              },
+              {
+                title: 'uranus',
+                text: 'Masse: 8.68 x 10^25 Tonnen<br/>Durchmesser: 50,724 km<br/>Oberfl.-temp: -195 °C (Wolkenoberseite)<br/>Distanz zur Sonne: 2.87 Milliarden km<br/>',
+              },
+              {
+                title: 'neptune',
+                text: 'Masse: 1.02 x 10^26 Tonnen<br/>Durchmesser: 49,244 km<br/>Oberfl.-temp: -201 °C (Wolkenoberseite)<br/>Distanz zur Sonne: 4.5 Milliarden km<br/>',
+              },
+            ];
+            planet_short_descriptions.forEach(description => {
+              let html_snippet = 
+              `<div class="planet-clickbox-infocard">
+                <div class="planet-clickbox-infocard-title">
+                  <p>${description.title}</p>
+                  <a onclick="clickboxBtnClose()">
+                    <img src="./../src/icons/close.svg" alt="close icon" />
+                  </a>
+                </div>
+                <p class="planet-clickbox-infocard-text">${description.text}</p>
+                <a class="btn" onclick="clickboxBtnHandler('${description.title}')" >
+                  <img src="./../src/icons/arrow-down.svg" alt="arrow down icon" />
+                  <span>mehr lesen</span>
+                </a>
+              </div>`;
+              clickbox.insertAdjacentHTML('beforeend', html_snippet);
+            });
+          </script>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <script>
+          const container = document.querySelector('.container');
+          const planet_infotabs = [
+            {
+              title: 'sun',
+              text: `Die Sonne ist der Stern im Zentrum unseres Sonnensystems, und ihre Bedeutung kann gar nicht hoch genug eingeschätzt werden. Ihre massive Schwerkraft ist der Klebstoff, der alles zusammenhält und Planeten, Asteroiden, Kometen und andere Himmelskörper auf ihren Bahnen hält.
+                    <br/><br/>Für uns auf der Erde ist die Sonne die wichtigste Quelle für lebensspendende Energie. Pflanzen machen sich die Kraft des Sonnenlichts durch Photosynthese zunutze, ein Prozess, der die Grundlage der Nahrungsketten unseres Planeten bildet. Die Wärme der Sonne trägt auch zur Regulierung der Temperatur auf unserem Planeten bei und macht das Leben, wie wir es kennen, erst möglich.
+                    <br/><br/>Darüber hinaus prägt die Sonnenaktivität unsere Umwelt, da sie das "Weltraumwetter" bestimmt, das sowohl wunderschöne Polarlichter erzeugen als auch manchmal Störungen in unserer Technologie verursachen kann.
+                    <br/><br/>Abgesehen von ihrer entscheidenden Rolle ist die Sonne aber auch ein faszinierender Ort! Wussten Sie, dass sie ein riesiger Energieball ist, der durch Kernfusion in seinem Kern erzeugt wird? Dieser ständige Prozess der Verschmelzung von Wasserstoff zu Helium setzt enorme Mengen an Licht und Wärme frei, die nach außen dringen.
+                    <br/><br/>Mit einem Alter von etwa 4,6 Milliarden Jahren ist die Sonne ein Stern mittleren Alters. Sie wird zwar noch Milliarden Jahre lang ununterbrochen leuchten, doch ihre Zukunft ist dramatisch. Sie wird sich schließlich zu einem Roten Riesen entwickeln, einem aufgeblähten Stern, der so groß ist, dass er die inneren Planeten unseres Sonnensystems verschlucken könnte. Trotz seines feurigen Schicksals reicht seine komplexe Atmosphäre weit über das hinaus, was wir sehen können, und birgt noch viele Geheimnisse, die wir entdecken müssen.<br/><br/>`,
+              image_count: 5,
+            },
+            {
+              title: 'mercury',
+              text: "Merkur ist der kleinste und schnellste Planet in unserem Sonnensystem und umrundet die Sonne in 88 Erdentagen. Seine Nähe zur Sonne führt zu extremen Temperaturschwankungen. Da er über keine schützende Atmosphäre verfügt, ist seine Oberfläche durch die häufigen Einschläge von Asteroiden und Kometen zerkratzt.<br/><br/>",
+              image_count: 4,
+            },
+            {
+              title: 'venus',
+              text: `Die Venus, die wegen ihrer ähnlichen Größe oft als Zwilling der Erde bezeichnet wird, ist eine völlig andere Welt. Ihre dichte Atmosphäre, die hauptsächlich aus Kohlendioxid besteht, speichert die Wärme in einem unkontrollierbaren Treibhauseffekt und macht sie zum heißesten Planeten in unserem Sonnensystem. Die Oberfläche ist von ausgedehnten vulkanischen Strukturen und Spuren vergangener Lavaströme geprägt.
+                    <br/><br/>Die Venus zeichnet sich durch ein Phänomen aus, das als retrograde Rotation bekannt ist, d. h. ihre Rotation um die eigene Achse ist im Vergleich zu den meisten Planeten in unserem Sonnensystem, einschließlich der Erde, entgegengesetzt.
+                    <br/>Ein Venustag dauert lange 243 Erdtage, was langsamer ist als die Umlaufzeit der Erde von 224,7 Tagen. 
+                    <br/><br/>Man nimmt an, dass diese ungewöhnliche Rotation das Ergebnis eines gigantischen Einschlags in der Frühgeschichte der Venus ist, der ihr einen beträchtlichen Drehimpuls verlieh, so dass sie sich in eine rückläufige Richtung dreht.<br/><br/>`,
+              image_count: 3,
+            },
+            {
+              title: 'earth',
+              text: `Unser Heimatplanet ist einzigartig in unserem Sonnensystem. Er ist der einzige bekannte Planet, auf dem Leben möglich ist, dank seiner Ozeane aus flüssigem Wasser, seiner schützenden Atmosphäre und seiner Lage in der bewohnbaren Zone der Sonne. Die Erde verfügt über eine Vielzahl von Ökosystemen, geologischen Besonderheiten und ein komplexes Klimasystem.<br/>
+                    <a href="./earth.html" class="btn" style="margin-top: 24px;">
+                      <img src="./../src/icons/figure-arrow-right.svg" alt="arrow right icon" />
+                      <span>mehr über die erde lesen</span>
+                    </a>
+                    <br/><br/><br/>`,
+              image_count: 4,
+            },
+            {
+              title: 'mars',
+              text: "Der für sein rostrotes Aussehen bekannte Mars ist eine kalte und wüstenartige Welt mit einer dünnen Atmosphäre. Er besitzt den höchsten Vulkan des Sonnensystems, den Olympus Mons, und ausgedehnte Canyon-Systeme wie die Valles Marineris. Es gibt Hinweise darauf, dass es auf der Marsoberfläche in ferner Vergangenheit flüssiges Wasser gegeben haben könnte.<br/>",
+              image_count: 3,
+            },
+            {
+              title: 'jupiter',
+              text: `Dieser Gasriese ist der größte Planet in unserem Sonnensystem und ein eigenständiger Stern. 
+                    <br/><br/>Seine turbulente Atmosphäre wird von gewaltigen Stürmen beherrscht, darunter der berühmte Große Rote Fleck.
+                    <br/><br/>Jupiter hat ein schwaches Ringsystem und eine große Anzahl von Monden, von denen einige möglicherweise unterirdische Ozeane beherbergen. Daraus ergibt sich auch eine Möglichkeit, dass Moleküle sich kombiniert haben könnten und so genanntes Leben entstehen sein könnte, was Jupiters Eismonde zu populären Hotspots der Weltraumforschung macht.<br/><br/>`,
+              image_count: 4,
+            },
+            {
+              title: 'saturn',
+              text: "Saturn ist berühmt für sein spektakuläres Ringsystem, das hauptsächlich aus Eispartikeln besteht. Wie Jupiter ist er ein Gasriese mit einer stürmischen Atmosphäre und einer Reihe faszinierender Monde. Titan, der größte Mond des Saturn, besitzt eine dichte Atmosphäre und Kohlenwasserstoffseen auf seiner Oberfläche.<br/><br/>",
+              image_count: 4,
+            },
+            {
+              title: 'uranus',
+              text: `Dieser Eisriese hat eine einzigartige seitliche Neigung von 90 Grad, wobei seine Rotationsachse fast parallel zu seiner Umlaufbahn verläuft, so dass es so aussieht, als würde er die Sonne wie eine rollende Kugel umkreisen.
+                    <br/><br/>Uranus besitzt ein schwaches Ringsystem und ist von zahlreichen eisigen Monden umgeben. In seiner Atmosphäre herrschen dynamische Wettermuster und starke Stürme.
+                    <br/><br/>Uranus war der erste Planet, der mit Hilfe eines Teleskops entdeckt wurde. Er wurde 1781 von dem Astronomen William Herschel entdeckt, obwohl er ihn zunächst für einen Kometen oder einen Stern hielt. Erst zwei Jahre später wurde das Objekt allgemein als neuer Planet anerkannt.<br/><br/>`,
+              image_count: 4,
+            },
+            {
+              title: 'neptune',
+              text: "Neptun, der sonnenfernste Planet, ist eine windige Welt mit Überschallstürmen. Dieser Eisriese hat ein dünnes Ringsystem und eine große Anzahl von Monden, darunter den geologisch aktiven Triton mit seinem Potenzial für Kryovulkanismus (Eisvulkane).<br/><br/>",
+              image_count: 4,
+            },
+          ];
+        
+          function insertImages(infotab) {
+            let html_snippet_image = '';
+            for(let i = 1; i <= infotab.image_count; i++) {
+              html_snippet_image += 
+              `<a href="./../src/img/planet-images/${infotab.title}${i}.jpg" class="swiper-slide">
+                <img src="./../src/img/planet-images/${infotab.title}${i}.jpg" alt="${infotab.title} Image" />
+              </a>`;
+            }
+            return html_snippet_image;
+          }
+        
+          planet_infotabs.forEach((infotab, index) => {
+            let html_snippet = 
+            `<div class="infotab" id="infotab-${infotab.title}">
+              <div class="textcontent">
+                <p class="header">${infotab.title}</p>
+                <div class="paragraph">
+                  <p class="paragraph-content">
+                    ${infotab.text}
+                  </p>
+                  <span class="bottom-fade"></span>
+                </div>
+              </div>
+              <div class="swiper-outer">
+                <div class="swiper moonflower-normal">
+                  <div class="swiper-wrapper gallery${index}">
+                    ${insertImages(infotab)}
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev">
+                    <img src="./../src/icons/arrow-right.svg" alt="arrow left icon" />
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="./../src/icons/arrow-right.svg" alt="arrow right icon" />
+                  </div>
+                </div>
+              </div>
+            </div>`;
+            container.insertAdjacentHTML('beforeend', html_snippet);
+          });
+        </script>
+
+      </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="w-full footer" id="footer">
+      <div class="container" >
+      
+        <div class="footer-upper" >
+          <div class="footer-upper-contact" >
+            <p>
+            name<br/>
+            Str. Nr.<br/>
+            plz stadt<br/>
+            phone nr.<br/>
+            email<br/>
+            </p>
+          </div>
+
+          <div class="footer-upper-navigation" >
+            <a href="./home.html">home</a>
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html" class="current-selected">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="footer-upper-newsletter" >
+            <form id="newsletter" onsubmit="handleSubmit()" >
+              <label for="newsletterInput" class="p" >Blast Off With Space News!</label>
+              <div class="input-helperbox">
+                <input type="email" id="newsletterInput" placeholder="example@mail.com" required class="moonflower-bold" />
+                <hr />
+              </div>
+              <button class="btn" type="submit" >
+                <img src="./../src/icons/newspaper.svg" alt="newspaper icon" />
+                <span>get news</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-lower" >
+          <div class="footer-lower-copyright" >
+            <p>&copy; 2024 by name</p>
+          </div>
+
+          <div class="footer-lower-socials" >
+            <a href="https://www.youtube.com/" target="_blank" >
+              <img src="./../src/img/youtube.png" alt="YouTube Button" />
+            </a>
+            <a href="https://www.reddit.com/" target="_blank" >
+              <img src="./../src/img/reddit.png" alt="Reddit Button" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" >
+              <img src="./../src/img/x.png" alt="X Button" />
+            </a>
+          </div>
+
+          <div class="footer-lower-rights" >
+            <a href="./impressum.html">impressum</a>
+            <a href="./datenschutz.html">datenschutz</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+
+    <!-- back to top -->
+    <a class="btt-btn" onclick="backToTop();" >
+      <img src="./../src/icons/arrow-up.svg" alt="arrow up icon" />
+    </a>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="./../src/js/main.js"></script>
+    <script src="./../src/js/solar.js"></script>
+
+
+  </body>
+</html>

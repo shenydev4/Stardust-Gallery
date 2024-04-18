@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+    <title>Stardust Gallery</title>
+    <meta name="author" content="Alexander-S. Dretvic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./../src/img/favicon.ico" />
+    <!-- imports -->
+    <link rel="stylesheet" href="./../src/styles/globals.css" />
+    <link rel="stylesheet" href="./../src/styles/home.css" />
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="w-full" id="header">
+
+      <div class="nav-md-xl w-full">
+        <a href="./home.html" class="logo">
+          <img src="./../src/img/logo.png" alt="Site Logo" />
+        </a>
+
+        <div class="nav-md-xl-items">
+          <a href="./erde.html">erde</a>
+          <a href="./solar.html">solar</a>
+          <a href="./interstellar.html">interstellar</a>
+        </div>
+
+        <div class="nav-md-xl-lang">
+          <a href="./home.html" class="current-selected">DE</a>
+          <p>&nbsp;|&nbsp;</p>
+          <a href="./../en/home.html">EN</a>
+        </div>
+      </div>
+
+      <div class="nav-xs w-full flex-col">
+
+        <div class="nav-xs-topbar w-full">
+          <a href="./home.html" class="logo">
+            <img src="./../src/img/logo.png" alt="Site Logo" />
+          </a>
+  
+          <button class="nav-btn" onclick="navBtnHandler();" >
+            <img src="./../src/icons/menu.svg" alt="menu icon" class="nav-btn-menu" />
+            <img src="./../src/icons/close.svg" alt="close icon" class="nav-btn-close" />
+          </button>
+
+        </div>
+
+        <span class="animation-circle"></span>
+        
+        <div class="active-mobile-nav flex-col">
+          <div class="active-mobile-nav-items flex-center flex-col">
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="active-mobile-nav-links">
+            <div class="active-mobile-nav-links-rights">
+              <a href="./impressum.html">impressum</a>
+              <a href="./datenschutz.html">datenschutz</a>
+            </div>
+            <div class="active-mobile-nav-links-socials">
+              <a href="https://www.youtube.com/" target="_blank" >
+                <img src="./../src/img/youtube.png" alt="YouTube Button" />
+              </a>
+              <a href="https://www.reddit.com/" target="_blank" >
+                <img src="./../src/img/reddit.png" alt="Reddit Button" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" >
+                <img src="./../src/img/x.png" alt="X Button" />
+              </a>
+            </div>
+          </div>
+          
+          <div class="active-mobile-nav-lang">
+            <div class="nav-md-xl-lang">
+              <a href="./home.html" class="current-selected">DE</a>
+              <p>&nbsp;|&nbsp;</p>
+              <a href="./../en/home.html">EN</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- this file -->
+    <div id="page1" class="moonflower-normal">
+
+      <div class="background">
+        <img src="./../src/img/nebulae-background.jpg" alt="nebulae-background" />
+      </div>
+
+      <div class="hero flex-center flex-col">
+        <h1>Stardust Gallery</h1>
+        <p>einfach nicht im Detail ernst nehmen und genießen! :&#41;</p>
+      </div>
+
+      <div class="container page-tabs">
+        <h2 class="moonflower-normal">
+          Deine Reise durch den Kosmos beginnt hier.
+          <br/>
+          Wohin wird sie dich führen?
+        </h2>
+        <div class="pagebox">
+
+          <div class="page">
+            <img class="page-icon" src="./../src/img/earth-moon-icon.png" alt="Earth and Moon Icon" />
+            <p class="page-header moonflower-bold">Unser heller blauer Punkt</p>
+            <div>
+              <p class="page-teaser">Entdecke den Planeten, den wir unser Zuhause nennen.</p>
+              <a class="btn" href="./erde.html" >
+                <img src="./../src/icons/figure-arrow-right.svg" alt="arrow right icon" />
+                <span>entdecken</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="page">
+            <img class="page-icon" src="./../src/img/solar-system-icon.png" alt="Solar System Icon" />
+            <p class="page-header moonflower-bold">Unsere Nachbarschaft</p>
+            <div>
+              <p class="page-teaser">Beobachte die Planeten in unserem kosmischen Hinterhof.</p>
+              <a class="btn" href="./solar.html" >
+                <img src="./../src/icons/figure-arrow-right.svg" alt="arrow right icon" />
+                <span>entdecken</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="page">
+            <img class="page-icon" src="./../src/img/black-hole-icon.png" alt="Black Hole Icon" />
+            <p class="page-header moonflower-bold">Jenseits unseres Sterns</p>
+            <div>
+              <p class="page-teaser">Tauchen ein in die Weiten des Weltraums.</p>
+              <a class="btn" href="./interstellar.html" >
+                <img src="./../src/icons/figure-arrow-right.svg" alt="arrow right icon" />
+                <span>entdecken</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    
+    <!-- footer -->
+    <div class="w-full footer" id="footer">
+      <div class="container" >
+      
+        <div class="footer-upper" >
+          <div class="footer-upper-contact" >
+            <p>
+            name<br/>
+            Str. Nr.<br/>
+            plz stadt<br/>
+            phone nr.<br/>
+            email<br/>
+            </p>
+          </div>
+
+          <div class="footer-upper-navigation" >
+            <a href="./home.html" class="current-selected">home</a>
+            <a href="./erde.html">erde</a>
+            <a href="./solar.html">solar</a>
+            <a href="./interstellar.html">interstellar</a>
+          </div>
+
+          <div class="footer-upper-newsletter" >
+            <form id="newsletter" onsubmit="handleSubmit()" >
+              <label for="newsletterInput" class="p" >Blast Off With Space News!</label>
+              <div class="input-helperbox">
+                <input type="email" id="newsletterInput" placeholder="example@mail.com" required class="moonflower-bold" />
+                <hr />
+              </div>
+              <button class="btn" type="submit" >
+                <img src="./../src/icons/newspaper.svg" alt="newspaper icon" />
+                <span>get news</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-lower" >
+          <div class="footer-lower-copyright" >
+            <p>&copy; 2024 by name</p>
+          </div>
+
+          <div class="footer-lower-socials" >
+            <a href="https://www.youtube.com/" target="_blank" >
+              <img src="./../src/img/youtube.png" alt="YouTube Button" />
+            </a>
+            <a href="https://www.reddit.com/" target="_blank" >
+              <img src="./../src/img/reddit.png" alt="Reddit Button" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" >
+              <img src="./../src/img/x.png" alt="X Button" />
+            </a>
+          </div>
+
+          <div class="footer-lower-rights" >
+            <a href="./impressum.html">impressum</a>
+            <a href="./datenschutz.html">datenschutz</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+
+    <!-- back to top -->
+    <a class="btt-btn" onclick="backToTop();" >
+      <img src="./../src/icons/arrow-up.svg" alt="arrow up icon" />
+    </a>
+
+
+    <!-- scripts -->
+    <script src="./../src/js/main.js"></script>
+    <script src="./../src/js/home.js"></script>
+
+
+  </body>
+</html>
