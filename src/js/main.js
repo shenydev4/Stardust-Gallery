@@ -106,5 +106,5 @@ function handleSubmit(e) {
   p.innerText = 'just joking :)';
 
   newsletterBox.prepend(p);
-  video.classList.add('active-newsletter-video');
+  video.classList.replace('never-gonna', 'never-gonna-active');
 }

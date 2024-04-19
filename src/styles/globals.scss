@@ -568,11 +568,14 @@ a {
       }
 
       .never-gonna {
-        width: 100px;
+        margin: 0 auto;
+        width: 70px;
         display: none;
-      }
-      .active-newsletter-video {
-        display: block;
+        &-active {
+          margin: 0 auto;
+          width: 70px;
+          display: block;
+        }
       }
     }
   }
