@@ -96,14 +96,15 @@ function handleSubmit(e) {
   
   event.preventDefault();
 
+  let newsletterBox = document.querySelector('#footer .footer-upper-newsletter');
   let newsletter = document.getElementById('newsletter');
+  let video = document.querySelector('#newsletter img');
+
   newsletter.style.display = 'none';
 
   let p = document.createElement('p');
   p.innerText = 'just joking :)';
-  let video = '<img src="./../src/img/never-gonna.gif" style="width: 100px;" />';
 
-  let newsletterBox = document.querySelector('#footer .footer-upper-newsletter');
   newsletterBox.prepend(p);
-  newsletterBox.insertAdjacentHTML('beforeend', video);
+  video.classList.add('active-newsletter-video');
 }

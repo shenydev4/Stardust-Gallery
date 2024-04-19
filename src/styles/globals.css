@@ -1,10 +1,14 @@
 @font-face {
   font-family: "moonflower-bold";
-  src: url("./../Fonts/MoonFlowerBold.ttf");
+  src: url("../Fonts/MoonFlowerBold.ttf");
 }
 @font-face {
   font-family: "moonflower-normal";
-  src: url("./../Fonts/MoonFlower.ttf");
+  src: url("../Fonts/MoonFlower.ttf");
+}
+@font-face {
+  font-family: "moonflower-italic";
+  src: url("../Fonts/MoonFlowerItalic.ttf");
 }
 .moonflower-bold {
   font-family: "moonflower-bold";
@@ -12,6 +16,10 @@
 
 .moonflower-normal {
   font-family: "moonflower-normal";
+}
+
+.moonflower-italic {
+  font-family: "moonflower-italic";
 }
 
 .w-full {
@@ -894,6 +902,12 @@ a:hover {
 }
 #footer .footer-upper-newsletter form .btn:hover {
   color: #cc95dd;
+}
+#footer .footer-upper-newsletter form video {
+  display: none;
+}
+#footer .footer-upper-newsletter form video.active-newsletter-video {
+  display: block;
 }
 #footer .footer-lower {
   display: flex;
