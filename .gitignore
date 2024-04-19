@@ -1,4 +1,4 @@
 /#other
 /info.txt
-/*.map
-/responsive.css
+/src/styles/*.map
+/src/styles/responsive.css
