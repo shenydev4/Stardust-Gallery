@@ -98,7 +98,7 @@ function handleSubmit(e) {
 
   let newsletterBox = document.querySelector('#footer .footer-upper-newsletter');
   let newsletter = document.getElementById('newsletter');
-  let video = document.querySelector('#newsletter img');
+  let video = document.querySelector('#newsletter .never-gonna');
 
   newsletter.style.display = 'none';
 
