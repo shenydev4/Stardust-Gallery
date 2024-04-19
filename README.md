@@ -1,3 +1,1 @@
-## Auszuführende Datei:
-- an sich jede .html file
-- empfohlen: ./home.html
+index.html -> en home (recommended language starter page)
