@@ -903,11 +903,11 @@ a:hover {
 #footer .footer-upper-newsletter form .btn:hover {
   color: #cc95dd;
 }
-#footer .footer-upper-newsletter form .never-gonna {
+#footer .footer-upper-newsletter .never-gonna {
   width: 100px;
   display: none;
 }
-#footer .footer-upper-newsletter form .active-newsletter-video {
+#footer .footer-upper-newsletter .active-newsletter-video {
   display: block;
 }
 #footer .footer-lower {
