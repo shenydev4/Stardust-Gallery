@@ -569,9 +569,9 @@ a {
         .never-gonna {
           width: 100px;
           display: none;
-          &.active-newsletter-video {
-            display: block;
-          }
+        }
+        .active-newsletter-video {
+          display: block;
         }
       }
     }
