@@ -1,10 +1,10 @@
 // responsive design comfort
 
 @mixin value($command, $value-xl, $value-md, $value-xs) {
-  @media ( min-width: 1920px ) {
+  @media ( min-width: 1820px ) {
     #{$command}: $value-xl;
   }
-  @media ( max-width: 1919px ) {
+  @media ( max-width: 1819px ) {
     #{$command}: $value-md;
   }
   @media ( max-width: 1023px ) {
@@ -13,13 +13,13 @@
 }
 
 @mixin value-xl($command, $value-xl) {
-  @media ( min-width: 1920px ) {
+  @media ( min-width: 1820px ) {
     #{$command}: $value-xl;
   }
 }
 
 @mixin value-md($command, $value-md) {
-  @media ( max-width: 1919px ) and ( min-width: 1024px ) {
+  @media ( max-width: 1819px ) and ( min-width: 1024px ) {
     #{$command}: $value-md;
   }
 }

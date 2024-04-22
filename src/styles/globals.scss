@@ -11,19 +11,12 @@
   font-family: 'moonflower-normal';
   src: url('../Fonts/MoonFlower.ttf');
 }
-@font-face {
-  font-family: 'moonflower-italic';
-  src: url('../Fonts/MoonFlowerItalic.ttf');
-}
 
 .moonflower-bold {
   font-family: 'moonflower-bold';
 }
 .moonflower-normal {
   font-family: 'moonflower-normal';
-}
-.moonflower-italic {
-  font-family: 'moonflower-italic';
 }
 
 
@@ -174,6 +167,8 @@ h1,h2,h3 {
   font-family: 'moonflower-bold';
   text-shadow: 0 0 5px white;
   margin: 0;
+  text-align: center;
+  white-space: wrap;
 }
 h1 {
   @include value(font-size, 120px, 100px, 80px);

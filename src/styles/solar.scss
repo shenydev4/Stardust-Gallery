@@ -97,7 +97,7 @@
     }
 
     .orbit {
-      // outline: 1px solid grey;
+      outline: 1px solid rgba($color: #fff, $alpha: .06);
   
       // orbit-animation($duration, $start-offset) | offset -> 0-360deg
       &-mercury {
@@ -273,9 +273,16 @@
             a {
               width: 35px;
               height: 35px;
+              display: flex;
+              transition: transform 200ms ease;
+
               img {
                 width: 35px;
                 height: 35px;
+              }
+
+              &:hover {
+                transform: scale(1.15);
               }
             }
           }

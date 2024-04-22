@@ -37,12 +37,12 @@
   bottom: 10px;
   left: 10px;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .planetary-funfact {
     font-size: 28px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .planetary-funfact {
     font-size: 24px;
   }
@@ -68,12 +68,12 @@
   background: white;
   box-shadow: 0 0 100px 0px yellow, inset 2px 2px 20px 12px rgba(255, 255, 0, 0.8);
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .sun {
     width: 50px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .sun {
     width: 45px;
   }
@@ -97,16 +97,19 @@
 #page3 .hero .sun:hover .infocard {
   opacity: 1;
 }
+#page3 .hero .orbit {
+  outline: 1px solid rgba(255, 255, 255, 0.06);
+}
 #page3 .hero .orbit-mercury {
   z-index: 7;
   animation: orbit-rotation 5s -4.1095890411s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-mercury {
     width: 80px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-mercury {
     width: 70px;
   }
@@ -120,12 +123,12 @@
   z-index: 6;
   animation: orbit-rotation 12.9s -4.3117808219s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-venus {
     width: 150px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-venus {
     width: 100px;
   }
@@ -139,12 +142,12 @@
   z-index: 5;
   animation: orbit-rotation 21s -14.9589041096s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-earth {
     width: 240px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-earth {
     width: 160px;
   }
@@ -158,12 +161,12 @@
   z-index: 4;
   animation: orbit-rotation 39.5s -14.9342465753s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-mars {
     width: 360px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-mars {
     width: 230px;
   }
@@ -177,12 +180,12 @@
   z-index: 3;
   animation: orbit-rotation 249.6s -25.3019178082s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-jupiter {
     width: 480px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-jupiter {
     width: 380px;
   }
@@ -196,12 +199,12 @@
   z-index: 2;
   animation: orbit-rotation 618.8s -184.7923287671s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-saturn {
     width: 580px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-saturn {
     width: 480px;
   }
@@ -215,12 +218,12 @@
   z-index: 1;
   animation: orbit-rotation 1762s -183.4410958904s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-uranus {
     width: 680px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-uranus {
     width: 590px;
   }
@@ -234,12 +237,12 @@
   z-index: 0;
   animation: orbit-rotation 3457s -880.8246575342s linear infinite forwards;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .orbit-neptune {
     width: 800px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .orbit-neptune {
     width: 700px;
   }
@@ -360,12 +363,12 @@
     display: none;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .planet-clickbox {
     width: 400px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .planet-clickbox {
     width: 300px;
   }
@@ -375,12 +378,12 @@
     width: 0;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .planet-clickbox {
     margin-left: 550px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .planet-clickbox {
     margin-left: 300px;
   }
@@ -406,20 +409,25 @@
 #page3 .hero .planet-clickbox-infocard-title a {
   width: 35px;
   height: 35px;
+  display: flex;
+  transition: transform 200ms ease;
 }
 #page3 .hero .planet-clickbox-infocard-title a img {
   width: 35px;
   height: 35px;
 }
+#page3 .hero .planet-clickbox-infocard-title a:hover {
+  transform: scale(1.15);
+}
 #page3 .hero .planet-clickbox-infocard-text {
   text-shadow: 0 0 5px white;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .hero .planet-clickbox-infocard-text {
     font-size: 34px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .hero .planet-clickbox-infocard-text {
     font-size: 28px;
   }
@@ -496,12 +504,12 @@
 #page3 .container {
   padding-top: 120px;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container {
     padding-top: 120px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container {
     padding-top: 80px;
   }
@@ -515,12 +523,12 @@
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab {
     height: 500px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab {
     height: 800px;
   }
@@ -530,12 +538,12 @@
     height: 100vh;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab {
     margin-bottom: 120px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab {
     margin-bottom: 120px;
   }
@@ -545,12 +553,12 @@
     margin-bottom: 60px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab {
     flex-direction: row-reverse;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab {
     flex-direction: column-reverse;
   }
@@ -560,17 +568,17 @@
     flex-direction: column-reverse;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab:nth-child(even) {
     flex-direction: row;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab:last-child {
     margin-bottom: 250px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab:last-child {
     margin-bottom: 200px;
   }
@@ -583,12 +591,12 @@
 #page3 .container .infotab .textcontent {
   z-index: 99;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .textcontent {
     height: 100%;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .textcontent {
     height: 50%;
   }
@@ -601,12 +609,12 @@
 #page3 .container .infotab .textcontent .header {
   font-weight: bold;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .textcontent .header {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .textcontent .header {
     margin-bottom: 20px;
   }
@@ -616,12 +624,12 @@
     margin-bottom: 10px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .textcontent .header {
     text-align: start;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .textcontent .header {
     text-align: center;
   }
@@ -659,12 +667,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .swiper-outer {
     width: 50%;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .swiper-outer {
     width: 80%;
   }
@@ -674,17 +682,17 @@
     width: 100%;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .swiper-outer {
     padding: 0 60px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .swiper-outer {
     margin: auto 0;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .swiper-outer {
     margin: 0 auto;
   }
@@ -705,12 +713,12 @@
   transition: all 250ms ease;
   transform: scale(0.8);
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page3 .container .infotab .swiper-outer .swiper .swiper-wrapper .swiper-slide {
     opacity: 0;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page3 .container .infotab .swiper-outer .swiper .swiper-wrapper .swiper-slide {
     opacity: 0.5;
   }

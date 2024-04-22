@@ -13,12 +13,12 @@
   position: absolute;
   transition: bottom 800ms ease;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .hero {
     background: radial-gradient(circle at center, black, transparent 30%);
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .hero {
     background: radial-gradient(circle at center, black, transparent 40%);
   }
@@ -47,12 +47,12 @@
 #page1 .page-tabs h2 {
   text-align: center;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs h2 {
     margin: 120px 0;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs h2 {
     margin: 80px 0;
   }
@@ -68,12 +68,12 @@
 #page1 .page-tabs .pagebox {
   display: flex;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox {
     justify-content: space-between;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox {
     justify-content: space-between;
   }
@@ -83,12 +83,12 @@
     justify-content: start;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox {
     align-items: start;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox {
     align-items: start;
   }
@@ -98,12 +98,12 @@
     align-items: center;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox {
     flex-direction: row;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox {
     flex-direction: row;
   }
@@ -113,12 +113,12 @@
     flex-direction: column;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox {
     margin-bottom: 250px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox {
     margin-bottom: 200px;
   }
@@ -136,12 +136,12 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox .page {
     padding: 70px 20px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox .page {
     padding: 50px 10px;
   }
@@ -151,12 +151,12 @@
     padding: 40px 10px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox .page {
     width: 400px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox .page {
     width: 260px;
   }
@@ -166,7 +166,7 @@
     width: 300px;
   }
 }
-@media (max-width: 1919px) and (min-width: 1024px) {
+@media (max-width: 1819px) and (min-width: 1024px) {
   #page1 .page-tabs .pagebox .page {
     min-height: 505px;
   }
@@ -191,12 +191,12 @@
   width: auto;
   margin: 0 auto;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox .page-icon {
     height: 200px;
   }
 }
-@media (max-width: 1919px) {
+@media (max-width: 1819px) {
   #page1 .page-tabs .pagebox .page-icon {
     height: 150px;
   }
@@ -210,7 +210,7 @@
   text-align: center;
   text-shadow: 0 0 2px black;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1820px) {
   #page1 .page-tabs .pagebox .page-header {
     white-space: nowrap;
   }
