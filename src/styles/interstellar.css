@@ -735,6 +735,8 @@
   margin-bottom: 50px;
   font-size: 150px;
   text-shadow: 0 0 5px white;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (min-width: 1820px) {
   #page3 .swiper-slide h2 {

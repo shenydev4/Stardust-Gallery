@@ -219,6 +219,7 @@
         @include value(font-size, 150px, 100px, 60px);
         text-shadow: 0 0 5px white;
         @include value-xs(text-align, center);
+        width: fit-content;
       }
   
       .big-slider-media {

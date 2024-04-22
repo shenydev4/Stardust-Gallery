@@ -251,6 +251,9 @@
     padding: 0;
   }
 }
+#page2 .earth-text h2, #page2 .moon-text h2 {
+  text-align: left;
+}
 @media (min-width: 1820px) {
   #page2 .earth-text h2, #page2 .moon-text h2 {
     margin-bottom: 30px;
